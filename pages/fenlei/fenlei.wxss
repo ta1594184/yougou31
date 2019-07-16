@@ -1,1 +1,56 @@
 /* pages/fenlei/fenlei.wxss */
+.classify{
+    display: flex;
+  position: absolute;
+  top: 100rpx;
+  bottom: 0;
+}
+.classify-left{
+  width: 200rpx;
+  line-height: 100rpx;
+  flex-shrink: 0;
+  background: #f4f4f4;
+}
+.classify-left-item{
+border-bottom: 1px solid #ddd;
+text-align: center;
+}
+.classify-left-item.active{
+  background-color: #fff;
+  position: relative;
+}
+.classify-left-item.active::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10rpx;
+  bottom: 20rpx;
+  top: 20rpx;
+  left: 0;
+  background-color: #eb4450;
+}
+.classify-right{
+width: 550rpx;
+}
+.classify-right-title{
+  margin: 50rpx 0;
+}
+.classify-right-title::before, .classify-right-title::after {
+  content: "/";
+  color: #ddd;
+  margin: 0 30rpx;
+}
+.classify-right-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.classify-right-item{
+  width: 33.33%;
+  text-align: center;
+  margin: 30rpx 0;
+}
+.classify-right-item-image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 10rpx;
+}

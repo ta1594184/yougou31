@@ -1,42 +1,18 @@
-// pages/fenlei/fenlei.js
-const { request } = require("../../utils/request.js")
-
+// pages/goods_list/goods_list.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    "classify":[],
-    activeIndex:0,
-    subClassify:[]
+
   },
-
-getClassIfy(){
-  request({ url:"categories"})
-    .then(res=>{
-      this.setData({
-        classify:res,
-        subClassify: res[this.data.activeIndex].children
-      })
-    })
-},
-//点击左侧获取数据索引
-  handleIfy(event){
-    const { index } = event.currentTarget.dataset
-    this.setData({
-      activeIndex:index,
-      subClassify:this.data.classify[index].children
-
-    })
-  },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getClassIfy()
+
   },
 
   /**

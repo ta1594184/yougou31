@@ -1,6 +1,2 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block >
-    <text> 没钱不敢点</text>
-  </block>
-</view>
+<Search/>

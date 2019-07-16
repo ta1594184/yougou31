@@ -4,6 +4,7 @@
     "pages/fenlei/fenlei",
     "pages/logs/logs",
     "pages/man/man",
+    "pages/goods_list/goods_list",
     "components/search/search"
   ],
   "window": {
@@ -11,8 +12,8 @@
    "backgroundColor": "#FF69B4",
     "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "优购",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "white"
+    
   },
   "tabBar": {
     "list": [

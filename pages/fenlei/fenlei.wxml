@@ -1,6 +1,26 @@
-<view class="container log-list">
-  <block >
-    <text> 没有分类还点</text>
-  </block>
+<Search/>
+<view class="classify">
+  <scroll-view class="classify-left" scroll-y>
+    <block wx:for="{{ classify }}" wx:key="cat_id">
+      <view bindtap="handleIfy" class="classify-left-item {{ index ===activeIndex? 'active' : '' }}" data-index="{{index}}">{{item.cat_name}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view scroll-y class="classify-right">
+     <block wx:for="{{ subClassify }}" wx:key="cat_id">
+      <view class="classify-right-title">
+        {{item.cat_name}}
+      </view>
+      <view class="classify-right-list">
+        <block wx:for="{{item.children}}" wx:for-item="item2" wx:key="cat_id">
+       <navigator
+       url="/page/goods-list/goods-list?" 
+       hover-class="none"
+       class="classify-right-item" >
+        <image class="classify-right-item-image" src="{{item2.cat_icon}}"></image>
+        <view>{{item2.cat_name}}</view>
+       </navigator>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
 </view>
-
