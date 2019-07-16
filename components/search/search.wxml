@@ -1,0 +1,14 @@
+<!--components/search/search.wxml-->
+<view>
+<view class="input-color">
+<view class="input-text">
+ <view class="group">
+  <block>
+    <icon type="search" size="20" color="{{item}}"/>
+  </block>
+
+</view>
+  <text>搜索</text>
+</view>
+</view>
+</view>

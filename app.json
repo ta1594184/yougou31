@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/fenlei/fenlei",
+    "pages/logs/logs",
+    "pages/man/man",
+    "components/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+   "backgroundColor": "#FF69B4",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "优购",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "/images/tabs/indexs.png",
+        "selectedIconPath":"/images/tabs/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/images/tabs/fenleis.png",
+        "selectedIconPath": "/images/tabs/fenlei.png",
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类"
+      },
+      {
+        "iconPath":"/images/tabs/gouwuches.png",
+        "selectedIconPath":"/images/tabs/gouwuche.png",
+        "pagePath": "pages/logs/logs",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "/images/tabs/gerenzhongxins.png",
+        "selectedIconPath": "/images/tabs/gerenzhongxin.png",
+        "pagePath": "pages/man/man",
+        "text": "个人中心"
+      }
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json"
+  
+}

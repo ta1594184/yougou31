@@ -1,0 +1,20 @@
+/* components/search/search.wxss */
+.input-text{
+  width: 740rpx;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 30rpx;
+  height: 60rpx;
+  position: relative;
+}
+.input-color{
+  width: 100%;
+  padding: 20rpx 0;
+  background: #eb4450;
+  text-align: center;
+}
+.group{
+position: absolute;
+top: 4rpx;
+left: 280rpx;
+}

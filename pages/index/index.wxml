@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<Search/>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" 
+  interval="{{interval}}" 
+  duration="{{duration}}" 
+  indicator-dots="true"
+  indicator-active-color="#ffffff"
+  circular
+  >
+  <block wx:for="{{imgUrls}}" wx:key="goods_id" class="banndin">
+    <swiper-item >
+      <image src="{{item.image_src}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="flexs">
+<!-- 商品入口图标 -->
+<block wx:for="{{entrance}}" wx:key="name">
+<view class="eny-img">
+<image src="{{item.image_src}}"/>
+</view>
+</block>
+</view>
+
+
+<view class="floor">
+<block wx:for="{{floor}}" wx:key="name">
+<view class="floor-head">
+<image src="{{item.floor_title.image_src}}"></image>
+</view>
+<view class="floor-body">
+  <view class="floor-body-left">
+    <image class="floor-body-left-img" src="{{item.product_list[0].image_src}}"></image>
+  </view>
+
+  <view class="floor-body-right">
+  <block wx:for="{{item.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name">
+  <image wx:if="{{index2>0}}"  class="floor-body-right-image"  src="{{item2.image_src}}"></image>
+  </block>
+  </view>
+</view>
+</block>
+</view>
+<view class="top"  hidden="{{top}}"  bindtap="goTop" data-top="{{0}}">
+<text class="top-text">顶部</text>
+</view>
