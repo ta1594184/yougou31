@@ -1,0 +1,57 @@
+/* pages/search/search.wxss */
+.search {
+  background-color: #eee;
+  padding: 20rpx 16rpx;
+}
+.search-text{
+  padding: 10rpx 10rpx;
+}
+.search-in {
+  background-color: #fff;
+  border-radius: 5rpx;
+  height: 60rpx;
+  /* 伸缩盒显示模式 */
+  display: flex;
+  /* 交叉轴对齐 */
+  align-items: center;
+  padding-left: 20rpx;
+  width: 540rpx;
+}
+.search-button{
+  position: absolute;
+  right: 15rpx;
+   background-color:transparent;
+   outline: none
+}
+  .search-history-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+    align-items: center;
+  }
+  .search-history-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .search-history-item{
+    background-color: #dddddd;
+    padding: 20rpx;
+    margin: 0 20rpx 20rpx 10rpx;
+  }
+  .search-history-hint{
+    position: absolute;
+    top: 100rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f2f2f2;
+    color: salmon;
+    
+  }
+  .search-history-hint-item{
+    padding: 20rpx 10rpx;
+    border-bottom: 1px solid #ddd;
+     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

@@ -1,0 +1,34 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <view class="search-in">
+    <icon class="search-icon" size="15" type="search"></icon>
+    <input 
+    bindinput="handleInput" 
+    bindconfirm="inputSumbit" 
+    bindblur="inputBlur" 
+    bindfocus="inputFocus" 
+    class="search-text" 
+    confirm-type="search" 
+    placeholder="请输入你想要的商品"
+    value="{{keyword}}"
+    ></input>
+    <button class="search-button" size="mini">取消</button>
+  </view>
+</view>
+<view class="search-history">
+<view class="search-history-title">
+<view class="search-history-title-text">历史搜索</view>
+<icon bindtap="removeHistory" class="search-history-title-icon" type="clear" size="15"></icon>
+</view >
+
+<view class="search-history-list" >
+<block wx:for="{{ historyList }}" wx:key="*this">
+<navigator url="/pages/goods_list/goods_list?keyword={{item}}" class="search-history-item">{{item}}</navigator>
+</block>
+</view>
+</view>
+<view class="search-history-hint" hidden="{{ !showTips }}">
+<block wx:for="{{tipsList}}" wx:key="goods_id">
+  <navigator url="/pages/goods_detail/goods_detail?goods_id={{ item.goods_id }}" class="search-history-hint-item">{{item.goods_name}}</navigator>
+</block>
+</view>

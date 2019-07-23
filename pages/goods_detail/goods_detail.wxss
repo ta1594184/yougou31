@@ -1,0 +1,89 @@
+/* pages/goods_detail/goods_detail.wxss */
+.slider{
+ width: 100%;
+height: 720rpx;
+ background: #ccc;
+}
+
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.goods_info_price{
+  color: #eb4450;
+  font-size: 40rpx;
+  padding: 20rpx;
+  
+}
+.goods_info_title{
+  display: flex;
+  margin:0 20rpx;
+}
+.goods_info_title_text{
+  flex: 1;
+  font-size: 32rpx;
+  padding-right: 50rpx;
+}
+.goods_info_title_add{
+  width: 140rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  border-left: 1rpx solid #ccc;
+  flex-shrink: 0;
+   flex-direction: column;
+}
+.goods-info-bottom{
+  padding: 32rpx 20rpx;
+  color: #ccc;
+  border-bottom: 20rpx solid #f4f4f4;
+  font-size: 27rpx;
+}
+.goods-detail-image-rich{
+  font-size: 0;
+}
+.fixed-bar{
+  display: flex;
+  position: fixed;
+  height: 100rpx;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+.fixed-bar-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  position: relative;
+}
+.fixed-bar-group-contact{
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+bottom: 0;
+opacity: 0;
+}
+.fixed-bar-group-ico{
+  font-size: 40rpx;
+  color: #999999;
+}
+.fixed-bar-group-text{
+font-size: 27rpx;
+color: #999999;
+}
+.fixed-bar-button{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4b73f;
+  color: #fff;
+}
+.fixed-bar-button:last-child{
+  background: #eb4450;
+}

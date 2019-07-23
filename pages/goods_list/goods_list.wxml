@@ -1,2 +1,24 @@
 <!--pages/goods_list/goods_list.wxml-->
-<text>pages/goods_list/goods_list.wxml</text>
+<view class="search">
+  <navigator url="/pages/search/search?keyword={{keyword}}" class="search-in">
+    <icon class="search-icon" size="15" type="search"></icon>
+    <text class="search-text">{{keyword}}</text>
+  </navigator>
+</view>
+<view class="tabs">
+<view class="tabs-item">综合</view>
+<view class="tabs-item">销量</view>
+<view class="tabs-item">价格</view>
+</view>
+
+<view class="goods-list">
+<block wx:for="{{ goods }}" wx:key="cat_id">
+<view class="goods-list-item" bindtap="goToDetail" data-id="{{item.goods_id}}">
+<image class="goods-list-imges" src="{{item.goods_small_logo}}"></image>
+<view class="goods-list-info">
+  <view class="goods-list-title">{{item.goods_name}}</view>
+  <view class="goods-list-price">￥{{item.goods_price}}.00</view>
+</view>
+</view>
+</block>
+</view>

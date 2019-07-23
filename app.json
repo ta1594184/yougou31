@@ -2,11 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/fenlei/fenlei",
-    "pages/logs/logs",
     "pages/man/man",
     "pages/goods_list/goods_list",
-    "components/search/search"
+    "components/search/search",
+    "pages/goods_detail/goods_detail",
+    "pages/search/search",
+    "pages/cart/cart"
   ],
+  
   "window": {
     "backgroundTextStyle": "dark",
    "backgroundColor": "#FF69B4",
@@ -15,6 +18,7 @@
     "navigationBarTextStyle": "white"
     
   },
+  
   "tabBar": {
     "list": [
       {
@@ -32,7 +36,7 @@
       {
         "iconPath":"/images/tabs/gouwuches.png",
         "selectedIconPath":"/images/tabs/gouwuche.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/cart/cart",
         "text": "购物车"
       },
       {

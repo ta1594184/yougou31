@@ -1,0 +1,43 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<swiper class="slider" indicator-dots autoplay circular>
+  <block wx:for="{{goods_all.pics}}" wx:key="goods_id">
+    <swiper-item>
+      <image bindtap="previewImage" data-current="{{ item.pics_big}}" src="{{item.pics_big}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="goods_info">
+<view class="goods_info_price">￥{{goods_all.goods_price}}</view>
+<view class="goods_info_title">
+<view class="goods_info_title_text">{{goods_all.goods_name}}</view>
+<view class="goods_info_title_add">
+<view class="iconfont icon-shoucang"></view>
+<view>收藏</view>
+</view>
+</view>
+<view class="goods-info-bottom">快递：免运费</view>
+</view>
+<view class="goods-detail-title">
+图片详情
+</view>
+<view class="goods-detail-image">
+<rich-text class="goods-detail-image-rich" nodes="{{ goods_all.goods_introduce }}"></rich-text>
+</view>
+<!-- 底部固定兰 -->
+<view class="fixed-bar">
+<view class="fixed-bar-group">
+  <button class="fixed-bar-group-contact" open-type="contact">客服服务功能</button>
+  <view class="iconfont icon-kefu fixed-bar-group-ico"></view>
+  <view class="fixed-bar-group-text">联系客服</view>
+</view>
+<navigator url="/pages/cart/cart" open-type="switchTab" class="fixed-bar-group">
+<view class="iconfont icon-gouwuche fixed-bar-group-ico"></view>
+<view class="fixed-bar-group-text">购物车</view>
+</navigator>
+<view class="fixed-bar-button" bindtap="addToCart">
+加入购物车
+</view>
+<view class="fixed-bar-button">
+立即购买
+</view>
+</view>

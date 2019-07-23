@@ -11,9 +11,9 @@
         {{item.cat_name}}
       </view>
       <view class="classify-right-list">
-        <block wx:for="{{item.children}}" wx:for-item="item2" wx:key="cat_id">
+        <block wx:for="{{item.children}}" wx:for-item="item2" wx:key="cat_id" wx:for-index="index2">
        <navigator
-       url="/page/goods-list/goods-list?" 
+       url="/pages/goods_list/goods_list?keyword={{ item2.cat_name }}&cid={{ item2.cat_id }}" 
        hover-class="none"
        class="classify-right-item" >
         <image class="classify-right-item-image" src="{{item2.cat_icon}}"></image>
